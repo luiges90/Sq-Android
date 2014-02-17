@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sq="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_title"
+        android:title="@string/app_standard"
+        android:enabled="false"
+        sq:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/action_unpause"
+        android:title="@string/unpause"
+        sq:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/action_select_wave"
+        android:title="@string/select_wave"
+        sq:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/action_stat"
+        android:title="@string/stats"
+        sq:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/action_report_problem"
+        android:title="@string/report_problem"
+        sq:showAsAction="never">
+    </item>
+
+</menu>

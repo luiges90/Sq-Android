@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.luiges90.sq"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.luiges90.sq.GameSurvivalActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_survival"
+            android:taskAffinity="com.luiges90.sq.GameSurvivalActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.luiges90.sq.HiscoreActivity"
+            android:parentActivityName="com.luiges90.sq.GameSurvivalActivity"
+            android:taskAffinity="com.luiges90.sq.GameSurvivalActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.luiges90.sq.GameActivity" />
+        </activity>
+        <activity
+            android:name="com.luiges90.sq.GameStandardActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_standard"
+            android:taskAffinity="com.luiges90.sq.GameStandardActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.luiges90.sq.WaveSelectionActivity"
+            android:parentActivityName="com.luiges90.sq.GameStandardActivity"
+            android:taskAffinity="com.luiges90.sq.GameStandardActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.luiges90.sq.GameStandardActivity" />
+        </activity>
+        <activity
+            android:name="com.luiges90.sq.AboutActivity"
+            android:parentActivityName="com.luiges90.sq.StatActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.luiges90.sq.StatActivity" />
+        </activity>
+        <activity
+            android:name="com.luiges90.sq.StatActivity" >
+        </activity>
+        <activity
+            android:name="com.luiges90.sq.StatEnemyActivity" >
+        </activity>
+        <activity
+            android:name="com.luiges90.sq.StatWaveActivity" >
+        </activity>
+    </application>
+
+</manifest>

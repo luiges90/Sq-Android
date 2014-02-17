@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sq</string>
+    <string name="app_survival">Sq Survival</string>
+    <string name="app_standard">Sq Standard</string>
+    <string name="lives">Lives: </string>
+    <string name="score">Score: </string>
+    <string name="paused">Paused</string>
+    <string name="unpause">Unpause</string>
+    <string name="retire">Retire</string>
+    <string name="cancel">Cancel</string>
+    <string name="retire_msg">Are you sure to retire from this game? Your current hiscore 
+    	will be saved and your game will be restarted from Wave 1.</string>
+    <string name="hiscore">Hiscore</string>
+    <string name="rank">#</string>
+    <string name="hs_wave">Wave</string>
+    <string name="hs_score">Score</string>
+    <string name="clear">Clear</string>
+    <string name="restore">Restore</string>
+    <string name="select_wave">Select Wave</string>
+    <string name="gameplay_stat">Gameplay Stat</string>
+    <string name="enemy_type">Color</string>
+    <string name="destroyed">Destroyed</string>
+    <string name="be_destroyed">Died on it</string>
+    <string name="stats">Stats</string>
+    <string name="wave">Wave</string>
+    <string name="cleared">Cleared</string>
+    <string name="be_destroyed_in_wave">Died in it</string>
+    <string name="enemy_stat">Enemy Stats</string>
+    <string name="wave_stat">Wave Stats</string>
+    <string name="about">About</string>
+    <string name="report_problem">Report an issue</string>
+    <string name="report_problem_dialog_title">Report an issue to developers</string>
+    <string name="report_email_title">Sq Issue Report</string>
+    <string name="report_email_content">[Enter here how you break Sq, and provide as much detail as possible so that we can fix
+it promptly, thank you.]\n
+\n
+-------------------------------------------------------\n  
+The following are System information, you don\'t need to change them and please don\'t change them.\n
+\n</string>
+    <string name="report_game_mode">Game Mode</string>
+    <string name="report_model">Device Model</string>
+    <string name="report_android_version">Android Version</string>
+    <string name="report_app_version">App Version</string>
+    <string name="report_msg_no_email_client">No E-mail App available.</string>
+    <string name="about_text">Created by \"C House\"\n
+        luiges90@gmail.com\n
+        \n
+        &#169; C House \n</string>
+    <string name="licensing">Copyright &#169; 2014 WONG Wing Lun
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+    <string name="about_privacy_policy_title">Privacy Policy</string>
+    <string name="about_privacy_policy">        This App uses AdMob for providing ads. Read about them at http://www.admob.com/\n
+        \n
+        This App uses Google Analytics to track how you use this app (i.e. Telemetry data), 
+        such that developers can make this app better. It includes: \n
+        - Access of game functions \n
+        - Your game progress and statistics \n
+        No personally identifible information 
+        will be collected. Read about them at http://www.google.com/analytics/\n</string>
+    <string name="do_not_track">Do not track how I use the app.</string>
+
+</resources>
