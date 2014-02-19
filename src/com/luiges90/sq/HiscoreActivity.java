@@ -30,7 +30,7 @@ public class HiscoreActivity extends Activity {
             TableRow row = new TableRow(this);
             TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
             row.setLayoutParams(lp);
-            
+
             int textColor;
             if (entry.equals(this.getIntent().getSerializableExtra(EXTRA_CURRENT_ENTRY))
                     && !highlighted) {
@@ -49,7 +49,7 @@ public class HiscoreActivity extends Activity {
             txRank.setGravity(Gravity.CENTER_HORIZONTAL);
             txRank.setTextAppearance(this, android.R.style.TextAppearance_Medium);
             txRank.setTextColor(textColor);
-            
+
             TextView txWave = new TextView(this);
             TableRow.LayoutParams w3p = new TableRow.LayoutParams(
                     TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
@@ -59,20 +59,20 @@ public class HiscoreActivity extends Activity {
             txWave.setGravity(Gravity.CENTER_HORIZONTAL);
             txWave.setTextAppearance(this, android.R.style.TextAppearance_Medium);
             txWave.setTextColor(textColor);
-            
+
             TextView txScore = new TextView(this);
             txScore.setLayoutParams(w3p);
             txScore.setText(Integer.toString(entry.score));
             txScore.setGravity(Gravity.CENTER_HORIZONTAL);
             txScore.setTextAppearance(this, android.R.style.TextAppearance_Medium);
             txScore.setTextColor(textColor);
-            
+
             row.addView(txRank);
             row.addView(txWave);
             row.addView(txScore);
-            
+
             table.addView(row, i);
-            
+
             i++;
         }
 
@@ -104,7 +104,7 @@ public class HiscoreActivity extends Activity {
         inflater.inflate(R.menu.report_problem_action, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -119,5 +119,5 @@ public class HiscoreActivity extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    
+
 }

@@ -26,5 +26,5 @@ public class HpEnemy extends BaseEnemy {
     public HpEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

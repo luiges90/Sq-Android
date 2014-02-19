@@ -11,11 +11,12 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
-    
+
     public static final int FPS = 60;
-    
+
     private GameField field;
-    private Vector firingAt = new Vector(Utility.randBetween(-GameField.FIELD_SIZE, GameField.FIELD_SIZE), 
+    private Vector firingAt = new Vector(Utility.randBetween(-GameField.FIELD_SIZE,
+            GameField.FIELD_SIZE),
             Utility.randBetween(-GameField.FIELD_SIZE, GameField.FIELD_SIZE));
 
     class GameThread extends Thread {
@@ -23,11 +24,11 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
         private boolean paused = false;
         private boolean running = false;
-        
+
         private long lastUpdate = System.currentTimeMillis();
 
         private Object runLock = new Object();
-        
+
         private Vector touching = null;
 
         public GameThread(SurfaceHolder holder) {
@@ -57,12 +58,12 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 }
             }
         }
-        
+
         private void handleTouching() {
             if (field.isPlayerDestroyed()) {
                 return;
             }
-            
+
             if (touching != null) {
                 Vector playerPos = field.getPlayerPosition();
                 int fireThreshold = 30;
@@ -72,7 +73,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                     firingAt = touching;
                 }
             }
-            
+
             field.playerFire(firingAt);
         }
 
@@ -80,7 +81,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
             if (paused) {
                 return false;
             }
-            
+
             synchronized (holder) {
                 int mask = event.getActionMasked();
                 int canvasSize = GameView.this.getWidth();
@@ -115,7 +116,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
                 this.paused = true;
             }
         }
-        
+
         private void unpause() {
             synchronized (holder) {
                 this.paused = false;
@@ -144,10 +145,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private GameThread thread;
 
     private final void init(final Context context) {
-        field = new GameField(context, 
-                context.getClass().getSimpleName() == "GameStandardActivity" ? 
+        field = new GameField(context,
+                context.getClass().getSimpleName() == "GameStandardActivity" ?
                         Progress.MODE_STANDARD : Progress.MODE_SURVIVAL);
-        
+
         SurfaceHolder holder = this.getHolder();
         holder.addCallback(this);
 
@@ -172,17 +173,18 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         super(context, attrs, defStyle);
         init(context);
     }
-    
+
     public void pause() {
         thread.pause();
     }
-    
+
     public void unpause() {
         thread.unpause();
     }
 
     public boolean onTouchEvent(MotionEvent event) {
-        if (thread == null) return false;
+        if (thread == null)
+            return false;
         return thread.onTouch(event);
     }
 
@@ -246,29 +248,29 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
         setMeasuredDimension(width, height);
     }
-    
+
     private static class StoreState implements Serializable {
         private static final long serialVersionUID = 2003859385743694878L;
         Vector firingAt;
         GameField field;
     }
-    
+
     Serializable getStoreState() {
         StoreState ss = new StoreState();
         ss.firingAt = firingAt;
         ss.field = field;
         return ss;
     }
-    
+
     void restoreState(Context context, Serializable state) {
         StoreState ss = (StoreState) state;
         this.firingAt = ss.firingAt;
         this.field = ss.field;
         this.field.setContext(context);
-        
+
         SurfaceHolder holder = this.getHolder();
         holder.addCallback(this);
-        
+
         setFocusable(true);
     }
 }

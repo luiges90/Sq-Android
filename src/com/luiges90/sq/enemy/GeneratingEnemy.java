@@ -25,5 +25,5 @@ public class GeneratingEnemy extends BaseEnemy {
     public GeneratingEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

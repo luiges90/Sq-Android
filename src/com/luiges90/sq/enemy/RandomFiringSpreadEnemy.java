@@ -17,7 +17,7 @@ public class RandomFiringSpreadEnemy extends BaseEnemy {
 
     private static List<Behaviour> getBehaviours() {
         List<Behaviour> b = new ArrayList<Behaviour>();
-        b.add(new RandomFiring(DEFAULT_FIRING_RATE, DEFAULT_BULLET_SPEED, 3, 
+        b.add(new RandomFiring(DEFAULT_FIRING_RATE, DEFAULT_BULLET_SPEED, 3,
                 (float) Math.toRadians(10), SimpleBullet.class));
         return b;
     }

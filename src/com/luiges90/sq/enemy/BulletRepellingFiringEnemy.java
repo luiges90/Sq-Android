@@ -11,7 +11,7 @@ import com.luiges90.sq.behaviour.Behaviour;
 import com.luiges90.sq.behaviour.BulletRepelling;
 
 public class BulletRepellingFiringEnemy extends BaseEnemy {
-    
+
     /**
      * 
      */
@@ -21,7 +21,7 @@ public class BulletRepellingFiringEnemy extends BaseEnemy {
     private static List<Behaviour> getBehaviours() {
         List<Behaviour> b = new ArrayList<Behaviour>();
         b.add(new BulletRepelling(0.4f));
-        b.add(new AimedFiring(DEFAULT_FIRING_RATE, DEFAULT_BULLET_SPEED, 0, 3, 
+        b.add(new AimedFiring(DEFAULT_FIRING_RATE, DEFAULT_BULLET_SPEED, 0, 3,
                 (float) Math.toRadians(10), SimpleBullet.class));
         return b;
     }
@@ -29,5 +29,5 @@ public class BulletRepellingFiringEnemy extends BaseEnemy {
     public BulletRepellingFiringEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

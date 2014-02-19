@@ -6,5 +6,5 @@ import com.luiges90.sq.MovingEntity;
 public interface OnFrameBehaviour extends Behaviour {
 
     public void onFrameUpdate(MovingEntity owner, GameField field);
-    
+
 }

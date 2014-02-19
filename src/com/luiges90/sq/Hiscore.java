@@ -18,7 +18,7 @@ public class Hiscore {
 
     public static final String LOG_TAG = "sq_hiscore";
     public static final int LENGTH = 10;
-    
+
     public static final String HISCORE_FILE = "sq_hiscore";
     private Context context;
 
@@ -74,7 +74,7 @@ public class Hiscore {
         }
 
     }
-    
+
     private void initEntries() {
         entries.clear();
         for (int i = 0; i < LENGTH; ++i) {
@@ -162,33 +162,33 @@ public class Hiscore {
     public List<Entry> getEntries() {
         return entries;
     }
-    
+
     public Entry getEntry(int p) {
         return entries.get(p);
     }
-    
+
     public void addEntry(Entry e) {
         entries.add(e);
-        
+
         Collections.sort(entries);
         Collections.reverse(entries);
         entries.remove(LENGTH);
-        
+
         saveHiScore();
     }
-    
+
     public void clear() {
         new File(context.getFilesDir(), HISCORE_FILE).delete();
         storedEntries = new ArrayList<Entry>(entries);
         initEntries();
     }
-    
+
     public void restore() {
         entries = storedEntries;
         saveHiScore();
         storedEntries = null;
     }
-    
+
     public boolean isRestorable() {
         return storedEntries != null;
     }

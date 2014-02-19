@@ -18,5 +18,5 @@ public class FastEnemy extends BaseEnemy {
     public FastEnemy(Vector position) {
         super(position, DEFAULT_SPEED * 3 / 2, DEFAULT_SIZE, COLOR, new ArrayList<Behaviour>());
     }
-    
+
 }

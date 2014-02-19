@@ -19,7 +19,7 @@ public class ExplodeEnemy extends BaseEnemy {
 
     private static List<Behaviour> getBehaviours() {
         List<Behaviour> b = new ArrayList<Behaviour>();
-        b.add(new CounterAttack(DEFAULT_BULLET_SPEED, 30, (float) Math.toRadians(360 / 30), 
+        b.add(new CounterAttack(DEFAULT_BULLET_SPEED, 30, (float) Math.toRadians(360 / 30),
                 0, SimpleBullet.class));
         return b;
     }
@@ -27,5 +27,5 @@ public class ExplodeEnemy extends BaseEnemy {
     public ExplodeEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

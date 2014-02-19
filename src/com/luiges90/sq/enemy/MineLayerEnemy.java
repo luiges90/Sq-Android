@@ -17,7 +17,7 @@ public class MineLayerEnemy extends BaseEnemy {
      */
     private static final long serialVersionUID = 655905255764014629L;
     public static final int COLOR = Color.HSVToColor(new float[] { 100, 0.9f, 0.5f });
-    
+
     private static List<Behaviour> getBehaviours() {
         List<Behaviour> b = new ArrayList<Behaviour>();
         b.add(new Hp(3));
@@ -28,5 +28,5 @@ public class MineLayerEnemy extends BaseEnemy {
     public MineLayerEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

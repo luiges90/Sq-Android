@@ -15,7 +15,7 @@ public class Teleport implements OnFrameBehaviour {
 
     private int freq;
     private int timer;
-    
+
     public Teleport(int freq) {
         this.freq = freq;
         this.timer = Utility.randBetween(0, freq);
@@ -30,5 +30,5 @@ public class Teleport implements OnFrameBehaviour {
             timer = freq;
         }
     }
-    
+
 }

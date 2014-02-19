@@ -29,5 +29,5 @@ public class HpAimedFiringEnemy extends BaseEnemy {
     public HpAimedFiringEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

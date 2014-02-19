@@ -26,5 +26,5 @@ public class FastRandomFiringEnemy extends BaseEnemy {
     public FastRandomFiringEnemy(Vector position) {
         super(position, DEFAULT_SPEED * 2, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

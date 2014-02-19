@@ -16,7 +16,7 @@ public class RandomFiring implements OnFrameBehaviour {
     private int fireCooldown, speed, spread;
     private float spreadAngle;
     private Class<? extends BaseEnemy> bullet;
-    
+
     private boolean justFired = false;
 
     private int fireCooldownTimer;
@@ -42,11 +42,11 @@ public class RandomFiring implements OnFrameBehaviour {
 
         this.fireCooldownTimer = Utility.randBetween(0, fireCooldown);
     }
-    
+
     protected float getFireAngle(MovingEntity owner, GameField field) {
         return Utility.randomAngle();
     }
-    
+
     protected void fire(MovingEntity owner, GameField field) {
         float angle = getFireAngle(owner, field);
         for (int i = -this.spread + 1; i <= this.spread / 2 + 1; i += 2) {
@@ -63,7 +63,7 @@ public class RandomFiring implements OnFrameBehaviour {
             this.fireCooldownTimer = this.fireCooldown;
 
             this.fire(owner, field);
-            
+
             justFired = true;
         } else {
             justFired = false;

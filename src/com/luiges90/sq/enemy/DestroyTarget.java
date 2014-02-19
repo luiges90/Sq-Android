@@ -23,5 +23,5 @@ public class DestroyTarget extends BaseEnemy {
     public DestroyTarget(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

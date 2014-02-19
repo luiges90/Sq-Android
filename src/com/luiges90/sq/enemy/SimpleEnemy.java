@@ -16,9 +16,9 @@ public class SimpleEnemy extends BaseEnemy {
     public SimpleEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, new ArrayList<Behaviour>());
     }
-    
+
     public SimpleEnemy(BaseEnemy owner) {
-        super(owner.getPosition(), DEFAULT_SPEED, DEFAULT_SIZE, -1, COLOR, 
+        super(owner.getPosition(), DEFAULT_SPEED, DEFAULT_SIZE, -1, COLOR,
                 false, owner, new ArrayList<Behaviour>());
     }
 

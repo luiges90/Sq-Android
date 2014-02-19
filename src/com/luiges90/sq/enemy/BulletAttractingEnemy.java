@@ -28,5 +28,5 @@ public class BulletAttractingEnemy extends BaseEnemy {
     public BulletAttractingEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

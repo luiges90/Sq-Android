@@ -31,5 +31,5 @@ public class DestroyAfterEnemy extends BaseEnemy {
     public DestroyAfterEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

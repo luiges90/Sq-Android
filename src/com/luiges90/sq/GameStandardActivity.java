@@ -7,32 +7,32 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 public class GameStandardActivity extends GameActivity {
-    
+
     public static final int START_WAVE_REQUEST_CODE = 1;
     public static final String INTENT_SELECTED_WAVE_CODE = "selected_wave";
-    
+
     protected String getStateFileName() {
         return "sq_state_standard";
     }
-    
+
     protected String getName() {
         return "Standard";
     }
-    
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         GameView gv = (GameView) findViewById(R.id.gameView);
-        
+
         gv.getField().setGameOverListener(new GameEnd());
-        
+
         if (isNewGame()) {
             gv.getField().setPlayerLives(1);
         }
-        
+
         gv.getField().setDrawDetails(false);
     }
-    
+
     public class GameEnd implements GameOverListener {
         public void onGameOver(GameField field) {
             GameView gv = (GameView) findViewById(R.id.gameView);
@@ -40,14 +40,14 @@ public class GameStandardActivity extends GameActivity {
             gv.getField().setGameOverListener(new GameEnd());
         }
     }
-    
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.standard_game_action, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -59,7 +59,7 @@ public class GameStandardActivity extends GameActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK && requestCode == START_WAVE_REQUEST_CODE) {
             if (data.hasExtra(INTENT_SELECTED_WAVE_CODE)) {
@@ -69,5 +69,5 @@ public class GameStandardActivity extends GameActivity {
             }
         }
     }
-    
+
 }

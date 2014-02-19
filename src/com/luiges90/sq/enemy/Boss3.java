@@ -31,8 +31,8 @@ public class Boss3 extends BaseEnemy {
         b.add(new Split(5, BulletAttractingEnemy.class));
         b.add(new BulletRepelling(0.4f));
         b.add(new RandomFiring(DEFAULT_FIRING_RATE / 2, 0, Mine.class));
-        b.add(new AimedFiring(DEFAULT_FIRING_RATE / 2, DEFAULT_BULLET_SPEED, 
-                (float) Math.toRadians(5), 
+        b.add(new AimedFiring(DEFAULT_FIRING_RATE / 2, DEFAULT_BULLET_SPEED,
+                (float) Math.toRadians(5),
                 3, (float) Math.toRadians(10), SimpleBullet.class));
         return b;
     }
@@ -40,5 +40,5 @@ public class Boss3 extends BaseEnemy {
     public Boss3(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE * 3, COLOR, getBehaviours());
     }
-    
+
 }

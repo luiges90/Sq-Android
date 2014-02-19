@@ -20,11 +20,11 @@ public class Progress {
 
     private int currentLevel;
     private Context context;
-    
+
     private int mode;
 
     private File getFile() {
-        return new File(context.getFilesDir(), 
+        return new File(context.getFilesDir(),
                 mode == MODE_STANDARD ? "sq_std_progress" : "sq_srv_progress");
     }
 
@@ -46,7 +46,7 @@ public class Progress {
             throw new IllegalArgumentException("Unexpected mode: " + mode);
         }
     }
-    
+
     private String getEventTag() {
         return this.mode == MODE_STANDARD ? "standard progress" : "survival progress";
     }
@@ -113,6 +113,5 @@ public class Progress {
             saveProgress();
         }
     }
-
 
 }

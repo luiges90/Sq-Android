@@ -26,5 +26,5 @@ public class CounterAttackIndestructibleEnemy extends BaseEnemy {
     public CounterAttackIndestructibleEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

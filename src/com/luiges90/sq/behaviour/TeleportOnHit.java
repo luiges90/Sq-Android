@@ -26,7 +26,7 @@ public class TeleportOnHit implements OnDestroyBehaviour {
     @Override
     public void onDestroy(MovingEntity owner, GameField field) {
         // no-op
-        
+
     }
 
 }

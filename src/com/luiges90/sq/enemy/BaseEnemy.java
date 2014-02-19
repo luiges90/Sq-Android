@@ -19,9 +19,9 @@ import com.luiges90.sq.behaviour.OnFrameBehaviour;
 public abstract class BaseEnemy extends MovingEntity {
 
     private static final long serialVersionUID = -4625238211828271393L;
-    
+
     private static final int AVOID_RADIUS = 100;
-    
+
     protected static final int DEFAULT_SIZE = 18;
     protected static final int DEFAULT_SPEED = 5;
     protected static final int DEFAULT_BULLET_SPEED = 6;
@@ -31,15 +31,15 @@ public abstract class BaseEnemy extends MovingEntity {
     private int drawColor;
 
     private transient RectF drawRect = new RectF();
-    
+
     private List<Behaviour> behaviours;
-    
+
     private BaseEnemy parent = null;
     private boolean bullet;
-    
+
     private static final Vector initVelocity(float speed) {
         float angle = Utility.randomAngle();
-        return new Vector((float) (speed * Math.cos(angle)), 
+        return new Vector((float) (speed * Math.cos(angle)),
                 (float) (speed * Math.sin(angle)));
     }
 
@@ -51,8 +51,9 @@ public abstract class BaseEnemy extends MovingEntity {
         } while (Vector.distanceSquared(result, avoid) < AVOID_RADIUS * AVOID_RADIUS);
         return result;
     }
-    
-    protected BaseEnemy(Vector position, float speed, int size, int drawColor, List<Behaviour> behaviours) {
+
+    protected BaseEnemy(Vector position, float speed, int size, int drawColor,
+            List<Behaviour> behaviours) {
         super(initVelocity(speed), position);
         this.size = size;
         this.drawColor = drawColor;
@@ -60,21 +61,24 @@ public abstract class BaseEnemy extends MovingEntity {
         initPaint(drawColor);
     }
 
-    protected BaseEnemy(Vector position, float speed, int size, int lifetime, int drawColor, List<Behaviour> behaviours) {
+    protected BaseEnemy(Vector position, float speed, int size, int lifetime, int drawColor,
+            List<Behaviour> behaviours) {
         super(initVelocity(speed), position, lifetime);
         this.size = size;
         this.drawColor = drawColor;
         this.behaviours = behaviours;
         initPaint(drawColor);
     }
-    
-    protected BaseEnemy(Vector position, float speed, int size, int drawColor, boolean bullet, BaseEnemy owner, List<Behaviour> behaviours) {
+
+    protected BaseEnemy(Vector position, float speed, int size, int drawColor, boolean bullet,
+            BaseEnemy owner, List<Behaviour> behaviours) {
         this(position, speed, size, drawColor, behaviours);
         this.bullet = bullet;
         this.parent = owner;
     }
-    
-    protected BaseEnemy(Vector position, float speed, int size, int lifetime, int drawColor, boolean bullet, BaseEnemy owner, List<Behaviour> behaviours) {
+
+    protected BaseEnemy(Vector position, float speed, int size, int lifetime, int drawColor,
+            boolean bullet, BaseEnemy owner, List<Behaviour> behaviours) {
         this(position, speed, size, lifetime, drawColor, behaviours);
         this.bullet = bullet;
         this.parent = owner;
@@ -86,11 +90,11 @@ public abstract class BaseEnemy extends MovingEntity {
         initPaint(drawColor);
         drawRect = new RectF();
     }
-    
+
     public List<Behaviour> getAllBehaviours() {
         return behaviours;
     }
-    
+
     public boolean doDestroy(GameField field) {
         boolean doDestroy = true;
         for (Behaviour b : behaviours) {
@@ -100,7 +104,7 @@ public abstract class BaseEnemy extends MovingEntity {
         }
         return doDestroy;
     }
-    
+
     public void onHit(GameField field) {
         super.onHit(field);
         for (Behaviour b : behaviours) {
@@ -110,7 +114,7 @@ public abstract class BaseEnemy extends MovingEntity {
         }
         field.getSoundPlayer().playSound(R.raw.hit);
     }
-    
+
     public void onDestroy(GameField field) {
         super.onDestroy(field);
         for (Behaviour b : behaviours) {
@@ -120,11 +124,11 @@ public abstract class BaseEnemy extends MovingEntity {
         }
         field.getSoundPlayer().playSound(bullet ? R.raw.bullet_destroy : R.raw.destroy);
     }
-    
+
     public int getSize() {
         return this.size;
     }
-    
+
     public void setSize(int size) {
         this.size = size;
     }
@@ -148,7 +152,7 @@ public abstract class BaseEnemy extends MovingEntity {
 
         canvas.restore();
     }
-    
+
     public void onFrameUpdate(GameField field) {
         super.onFrameUpdate(field);
         for (Behaviour b : behaviours) {
@@ -161,16 +165,16 @@ public abstract class BaseEnemy extends MovingEntity {
     public BaseEnemy getParent() {
         return parent;
     }
-    
+
     public int getColor() {
         return this.drawColor;
     }
-    
+
     public void setColor(int color) {
         this.drawColor = color;
         super.setColor(color);
     }
-    
+
     public boolean isBullet() {
         return bullet;
     }

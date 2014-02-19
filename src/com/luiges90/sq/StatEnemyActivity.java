@@ -17,26 +17,26 @@ import android.widget.TextView;
 import com.luiges90.sq.enemy.BaseEnemy;
 
 public class StatEnemyActivity extends Fragment {
-    
+
     private void showStats() {
         Stat stat = Stat.getInstance(this.getActivity());
         TableLayout table = (TableLayout) getView().findViewById(R.id.tblStat);
-        
+
         int i = 1;
         for (Map.Entry<Class<? extends BaseEnemy>, Integer> kv : stat.getKilled().entrySet()) {
             int enemyColor = Color.BLACK;
             try {
                 enemyColor = (Integer) kv.getKey().getField("COLOR").get(null);
             } catch (IllegalAccessException e) {
-                Log.e("stat", kv.getKey().getSimpleName() + " COLOR was not accessible." , e);
+                Log.e("stat", kv.getKey().getSimpleName() + " COLOR was not accessible.", e);
             } catch (NoSuchFieldException e) {
-                Log.e("stat", kv.getKey().getSimpleName() + " has no COLOR." , e);
+                Log.e("stat", kv.getKey().getSimpleName() + " has no COLOR.", e);
             }
-            
+
             TableRow row = new TableRow(this.getActivity());
             TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
             row.setLayoutParams(lp);
-            
+
             TextView txEnemy = new TextView(this.getActivity());
             TableRow.LayoutParams w1p = new TableRow.LayoutParams(
                     TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT);
@@ -44,7 +44,7 @@ public class StatEnemyActivity extends Fragment {
             txEnemy.setLayoutParams(w1p);
             txEnemy.setGravity(Gravity.CENTER_HORIZONTAL);
             txEnemy.setBackgroundColor(enemyColor);
-            
+
             TextView txKilled = new TextView(this.getActivity());
             TableRow.LayoutParams w3p = new TableRow.LayoutParams(
                     TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
@@ -53,19 +53,19 @@ public class StatEnemyActivity extends Fragment {
             txKilled.setText(Integer.toString(kv.getValue()));
             txKilled.setGravity(Gravity.CENTER_HORIZONTAL);
             txKilled.setTextAppearance(this.getActivity(), android.R.style.TextAppearance_Medium);
-            
+
             TextView txBeKilled = new TextView(this.getActivity());
             txBeKilled.setLayoutParams(w3p);
             txBeKilled.setText(Integer.toString(stat.getBeKilled(kv.getKey())));
             txBeKilled.setGravity(Gravity.CENTER_HORIZONTAL);
             txBeKilled.setTextAppearance(this.getActivity(), android.R.style.TextAppearance_Medium);
-            
+
             row.addView(txEnemy);
             row.addView(txKilled);
             row.addView(txBeKilled);
-            
+
             table.addView(row, i);
-            
+
             i++;
         }
     }
@@ -74,7 +74,7 @@ public class StatEnemyActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activity_enemy_stat, container, false);
     }
-    
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);

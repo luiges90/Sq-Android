@@ -18,5 +18,5 @@ public class SmallEnemy extends BaseEnemy {
     public SmallEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE / 2, COLOR, new ArrayList<Behaviour>());
     }
-    
+
 }

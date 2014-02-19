@@ -26,5 +26,5 @@ public class SneakyEnemy extends BaseEnemy {
         super(position, DEFAULT_SPEED / 2, DEFAULT_SIZE, COLOR, getBehaviours());
         this.setAlpha(0);
     }
-    
+
 }

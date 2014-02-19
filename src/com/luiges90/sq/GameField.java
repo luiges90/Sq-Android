@@ -88,7 +88,7 @@ public class GameField implements Serializable {
 
         reset(0);
     }
-    
+
     public void setWave(int wave) {
         this.wave = wave;
         startWave();
@@ -147,7 +147,7 @@ public class GameField implements Serializable {
                 return;
             }
         }
-        
+
         Stat.getInstance(context).addCleared(wave);
         startNextWave();
     }
@@ -155,7 +155,7 @@ public class GameField implements Serializable {
     private void destroyPlayer(BaseEnemy killer) {
         if (!player.isDestroyed() && !player.isInvincible()) {
             player.destroy(this);
-    
+
             BaseEnemy scorer = killer;
             while (scorer.getParent() != null) {
                 scorer = scorer.getParent();
@@ -238,7 +238,7 @@ public class GameField implements Serializable {
         detectCollision();
         checkComplete();
     }
-    
+
     public void draw(Canvas canvas) {
         draw(canvas, canvas.getWidth());
     }

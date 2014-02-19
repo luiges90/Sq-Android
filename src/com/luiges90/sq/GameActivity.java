@@ -25,7 +25,7 @@ public abstract class GameActivity extends Activity {
     private boolean newGame;
 
     protected abstract String getStateFileName();
-    
+
     protected abstract String getName();
 
     protected boolean isNewGame() {

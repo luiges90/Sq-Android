@@ -5,7 +5,7 @@ import com.luiges90.sq.MovingEntity;
 import com.luiges90.sq.enemy.BaseEnemy;
 
 public class HpShrinking extends Hp {
-    
+
     /**
      * 
      */
@@ -13,7 +13,7 @@ public class HpShrinking extends Hp {
     private float size = -1;
     private float reduceSize;
     private int smallest;
-    
+
     public HpShrinking(int hp, int smallest) {
         super(hp);
         this.smallest = smallest;
@@ -23,13 +23,13 @@ public class HpShrinking extends Hp {
         BaseEnemy e = (BaseEnemy) owner;
         if (size < 0) {
             size = e.getSize();
-            reduceSize = (size - smallest) / getHp(); 
+            reduceSize = (size - smallest) / getHp();
         }
 
         super.onHit(owner, field);
-        
+
         size -= reduceSize;
         e.setSize((int) size);
     }
-    
+
 }

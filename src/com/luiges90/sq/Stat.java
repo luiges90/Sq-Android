@@ -59,7 +59,7 @@ public class Stat implements Serializable {
                 ois = new ObjectInputStream(new FileInputStream(file));
                 Stat result = (Stat) ois.readObject();
                 ois.close();
-                
+
                 killed = result.killed;
                 beKilled = result.beKilled;
                 dieCount = result.dieCount;
@@ -79,7 +79,7 @@ public class Stat implements Serializable {
             Log.e(LOG_TAG, "Cannot close file", ex2);
         }
     }
-    
+
     public void save() {
         File file = new File(context.getFilesDir(), FILENAME);
         ObjectOutputStream oos = null;
@@ -99,7 +99,7 @@ public class Stat implements Serializable {
             Log.e(LOG_TAG, "Cannot close file", ex2);
         }
     }
-    
+
     private void initIfNull() {
         if (killed == null) {
             killed = new LinkedHashMap<Class<? extends BaseEnemy>, Integer>();
@@ -176,11 +176,11 @@ public class Stat implements Serializable {
                         null)
                         .build());
     }
-    
+
     public Map<Class<? extends BaseEnemy>, Integer> getKilled() {
         return killed;
     }
-    
+
     public int getKilled(BaseEnemy e) {
         return getKilled(e.getClass());
     }
@@ -192,7 +192,7 @@ public class Stat implements Serializable {
             return 0;
         }
     }
-    
+
     public Map<Class<? extends BaseEnemy>, Integer> getBeKilled() {
         return beKilled;
     }
@@ -200,7 +200,7 @@ public class Stat implements Serializable {
     public int getBeKilled(BaseEnemy e) {
         return getBeKilled(e.getClass());
     }
-    
+
     public int getBeKilled(Class<? extends BaseEnemy> e) {
         if (beKilled.containsKey(e)) {
             return beKilled.get(e);
@@ -208,11 +208,11 @@ public class Stat implements Serializable {
             return 0;
         }
     }
-    
+
     public Map<Integer, Integer> getClearedWaveCounts() {
         return clearedCount;
     }
-    
+
     public int getClearedInWave(int wave) {
         if (clearedCount.containsKey(wave)) {
             return clearedCount.get(wave);
@@ -220,11 +220,11 @@ public class Stat implements Serializable {
             return 0;
         }
     }
-    
+
     public Map<Integer, Integer> getDieInWaveCounts() {
         return dieCount;
     }
-    
+
     public int getDieInWave(int wave) {
         if (dieCount.containsKey(wave)) {
             return dieCount.get(wave);

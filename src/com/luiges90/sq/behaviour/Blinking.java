@@ -10,10 +10,10 @@ public class Blinking implements OnFrameBehaviour {
      * 
      */
     private static final long serialVersionUID = -1641674293999612205L;
-    
+
     private int freq;
     private int freqTimer;
-    
+
     public Blinking(int freq) {
         this.freq = freq;
         this.freqTimer = Utility.randBetween(0, freq);

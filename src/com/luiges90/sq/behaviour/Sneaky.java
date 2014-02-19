@@ -10,17 +10,17 @@ public class Sneaky implements OnFrameBehaviour, OnDestroyBehaviour {
      * 
      */
     private static final long serialVersionUID = -5816603900138173430L;
-    
+
     private int range;
-    
+
     public Sneaky(int range) {
         this.range = range;
     }
 
     @Override
     public void onFrameUpdate(MovingEntity owner, GameField field) {
-        if (!field.isPlayerDestroyed() && 
-                Vector.distanceSquared(field.getPlayerPosition(), owner.getPosition()) 
+        if (!field.isPlayerDestroyed() &&
+                Vector.distanceSquared(field.getPlayerPosition(), owner.getPosition())
                 < range * range) {
             owner.setAlpha(255);
         } else {
@@ -30,8 +30,8 @@ public class Sneaky implements OnFrameBehaviour, OnDestroyBehaviour {
 
     @Override
     public boolean isDestroyed(MovingEntity owner, GameField field) {
-        return Vector.distanceSquared(field.getPlayerPosition(), owner.getPosition()) 
-                < range * range;
+        return Vector.distanceSquared(field.getPlayerPosition(), owner.getPosition())
+        < range * range;
     }
 
     @Override
@@ -43,7 +43,5 @@ public class Sneaky implements OnFrameBehaviour, OnDestroyBehaviour {
     public void onDestroy(MovingEntity owner, GameField field) {
         // no-op
     }
-    
-    
 
 }

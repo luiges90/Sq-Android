@@ -12,7 +12,7 @@ public class HpTransparenting extends Hp {
     public HpTransparenting(int hp) {
         super(hp);
     }
-    
+
     protected void colorChange(MovingEntity owner) {
         owner.setAlpha(getHp() * 255 / getInitHp());
     }

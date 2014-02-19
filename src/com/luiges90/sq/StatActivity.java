@@ -32,7 +32,7 @@ public class StatActivity extends FragmentActivity {
                 null);
 
     }
-    
+
     @Override
     public void onStart() {
         super.onStart();
@@ -51,7 +51,7 @@ public class StatActivity extends FragmentActivity {
         inflater.inflate(R.menu.report_problem_action, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -66,5 +66,5 @@ public class StatActivity extends FragmentActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    
+
 }

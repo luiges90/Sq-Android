@@ -10,7 +10,7 @@ import com.luiges90.sq.behaviour.Behaviour;
 import com.luiges90.sq.behaviour.Indestructible;
 
 public class IndestructibleBullet extends BaseEnemy {
-    
+
     /**
      * 
      */
@@ -29,5 +29,5 @@ public class IndestructibleBullet extends BaseEnemy {
                 true, owner, getBehaviours());
 
     }
-    
+
 }

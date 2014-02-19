@@ -26,7 +26,8 @@ public class WaveSelectionActivity extends Activity {
 
         @Override
         public int getCount() {
-            return Progress.instance(WaveSelectionActivity.this, Progress.MODE_STANDARD).getCurrentLevel();
+            return Progress.instance(WaveSelectionActivity.this, Progress.MODE_STANDARD)
+                    .getCurrentLevel();
         }
 
         @Override
@@ -69,14 +70,14 @@ public class WaveSelectionActivity extends Activity {
         }
 
     }
-    
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.report_problem_action, menu);
         return super.onCreateOptionsMenu(menu);
     }
-    
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

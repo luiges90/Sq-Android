@@ -21,16 +21,16 @@ public class StaticGameView extends View {
     public StaticGameView(Context context, AttributeSet as, int i) {
         super(context, as, i);
     }
-    
+
     public void setField(GameField field) {
         this.field = field;
     }
-    
+
     protected void onDraw(Canvas canvas) {
         canvas.drawColor(Color.BLACK);
         field.draw(canvas, this.getWidth());
     }
-    
+
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
@@ -57,6 +57,5 @@ public class StaticGameView extends View {
 
         setMeasuredDimension(width, height);
     }
-    
-    
+
 }

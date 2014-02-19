@@ -26,5 +26,5 @@ public class SmallChasingEnemy extends BaseEnemy {
     public SmallChasingEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE / 2, COLOR, getBehaviours());
     }
-    
+
 }

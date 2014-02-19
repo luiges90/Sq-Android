@@ -27,5 +27,4 @@ public class AimedFrequentFiringEnemy extends BaseEnemy {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
 
-    
 }

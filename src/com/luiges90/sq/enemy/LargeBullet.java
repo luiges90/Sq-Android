@@ -15,7 +15,7 @@ public class LargeBullet extends BaseEnemy {
      * 
      */
     private static final long serialVersionUID = -6692591615511400363L;
-    
+
     private static List<Behaviour> getBehaviours() {
         List<Behaviour> b = new ArrayList<Behaviour>();
         b.add(new Hp(3));
@@ -29,5 +29,5 @@ public class LargeBullet extends BaseEnemy {
                 true, owner, getBehaviours());
 
     }
-    
+
 }

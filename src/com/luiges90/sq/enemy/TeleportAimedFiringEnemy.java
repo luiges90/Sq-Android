@@ -29,5 +29,5 @@ public class TeleportAimedFiringEnemy extends BaseEnemy {
     public TeleportAimedFiringEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

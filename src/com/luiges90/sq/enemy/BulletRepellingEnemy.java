@@ -26,5 +26,5 @@ public class BulletRepellingEnemy extends BaseEnemy {
     public BulletRepellingEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

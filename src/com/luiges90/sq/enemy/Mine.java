@@ -28,5 +28,5 @@ public class Mine extends BaseEnemy {
                 true, owner, getBehaviours());
 
     }
-    
+
 }

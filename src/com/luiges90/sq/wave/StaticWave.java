@@ -55,7 +55,7 @@ import com.luiges90.sq.enemy.TeleportOnHitEnemy;
 import com.luiges90.sq.enemy.BlackBulletAttractingEnemy;
 
 public class StaticWave implements WaveGenerator {
-    
+
     public static final int WAVE_COUNT = 100;
 
     @SuppressWarnings("unchecked")
@@ -236,7 +236,7 @@ public class StaticWave implements WaveGenerator {
                 CounterAttackIndestructibleEnemy.class
         };
         data[38] = new Class[] {
-                LargeEnemy.class, SmallEnemy.class, FastEnemy.class, 
+                LargeEnemy.class, SmallEnemy.class, FastEnemy.class,
                 LargeEnemy.class, SmallEnemy.class, FastEnemy.class,
                 TeleportOnHitEnemy.class,
                 RandomFiringFrequentEnemy.class, RandomFiringFrequentEnemy.class,
@@ -279,7 +279,7 @@ public class StaticWave implements WaveGenerator {
                 RandomFiringSpreadEnemy.class, RandomFiringSpreadEnemy.class,
         };
         data[46] = new Class[] {
-                BulletRepellingEnemy.class, BulletRepellingEnemy.class, 
+                BulletRepellingEnemy.class, BulletRepellingEnemy.class,
                 BulletRepellingEnemy.class, BulletRepellingEnemy.class,
                 TeleportOnHitEnemy.class, TeleportOnHitEnemy.class,
                 CounterAttackIndestructibleEnemy.class, CounterAttackIndestructibleEnemy.class
@@ -301,7 +301,7 @@ public class StaticWave implements WaveGenerator {
         };
         data[50] = new Class[] {
                 LargeFiringEnemy.class, LargeFiringEnemy.class, LargeFiringEnemy.class,
-                TeleportOnHitEnemy.class, TeleportOnHitEnemy.class, TeleportOnHitEnemy.class, 
+                TeleportOnHitEnemy.class, TeleportOnHitEnemy.class, TeleportOnHitEnemy.class,
                 SplitEnemy.class, SplitEnemy.class, SplitEnemy.class
         };
         data[51] = new Class[] {
@@ -426,9 +426,9 @@ public class StaticWave implements WaveGenerator {
         };
         data[71] = new Class[] {
                 BurstFiringEnemy.class, BurstFiringEnemy.class, BurstFiringEnemy.class,
-                AimedFrequentFiringEnemy.class, AimedFrequentFiringEnemy.class, 
+                AimedFrequentFiringEnemy.class, AimedFrequentFiringEnemy.class,
                 AimedFrequentFiringEnemy.class,
-                AimedIndestructibleFiringEnemy.class, AimedIndestructibleFiringEnemy.class, 
+                AimedIndestructibleFiringEnemy.class, AimedIndestructibleFiringEnemy.class,
                 AimedIndestructibleFiringEnemy.class,
         };
         data[72] = new Class[] {
@@ -512,7 +512,7 @@ public class StaticWave implements WaveGenerator {
                 BlackBulletAttractingEnemy.class, BlackBulletAttractingEnemy.class,
         };
         data[84] = new Class[] {
-                DarkChasingEnemy.class, DarkChasingEnemy.class, 
+                DarkChasingEnemy.class, DarkChasingEnemy.class,
                 DarkRandomFiringEnemy.class, DarkRandomFiringEnemy.class,
                 BlackBulletAttractingEnemy.class, BlackBulletAttractingEnemy.class,
                 SneakyEnemy.class, SneakyEnemy.class, SneakyEnemy.class,
@@ -548,7 +548,7 @@ public class StaticWave implements WaveGenerator {
         };
         data[90] = new Class[] {
                 ExplodeEnemy.class, ExplodeEnemy.class, ExplodeEnemy.class,
-                AimedIndestructibleFiringEnemy.class, AimedIndestructibleFiringEnemy.class, 
+                AimedIndestructibleFiringEnemy.class, AimedIndestructibleFiringEnemy.class,
                 AimedIndestructibleFiringEnemy.class,
                 AimedFrequentFiringEnemy.class, AimedFrequentFiringEnemy.class,
                 AimedFrequentFiringEnemy.class,
@@ -568,7 +568,7 @@ public class StaticWave implements WaveGenerator {
                 FastRandomFiringEnemy.class, FastRandomFiringEnemy.class,
                 ExplodeEnemy.class, ExplodeEnemy.class,
                 SplitEnemy.class, SplitEnemy.class,
-                RandomFiringSpreadEnemy.class, RandomFiringSpreadEnemy.class, 
+                RandomFiringSpreadEnemy.class, RandomFiringSpreadEnemy.class,
                 BurstFiringEnemy.class, BurstFiringEnemy.class
         };
         data[93] = new Class[] {
@@ -592,7 +592,7 @@ public class StaticWave implements WaveGenerator {
                 BlackBulletAttractingEnemy.class, BlackBulletAttractingEnemy.class,
                 ExplodeEnemy.class, ExplodeEnemy.class,
                 ExplodeEnemy.class, ExplodeEnemy.class,
-                TeleportAimedFiringEnemy.class, TeleportAimedFiringEnemy.class, 
+                TeleportAimedFiringEnemy.class, TeleportAimedFiringEnemy.class,
         };
         data[96] = new Class[] {
                 AimedAccurateFastFiringEnemy.class, AimedAccurateFastFiringEnemy.class,
@@ -609,13 +609,13 @@ public class StaticWave implements WaveGenerator {
                 DarkChasingEnemy.class, DarkChasingEnemy.class, DarkChasingEnemy.class,
         };
         data[98] = new Class[] {
-                DestroyAfterEnemy.class, DestroyTarget.class, DarkChasingEnemy.class, 
-                BlackBulletAttractingEnemy.class, GeneratingChasingEnemy.class, 
-                ExplodeEnemy.class, TeleportAimedFiringEnemy.class, 
+                DestroyAfterEnemy.class, DestroyTarget.class, DarkChasingEnemy.class,
+                BlackBulletAttractingEnemy.class, GeneratingChasingEnemy.class,
+                ExplodeEnemy.class, TeleportAimedFiringEnemy.class,
                 BulletRepellingFiringEnemy.class, AimedAccurateFastFiringEnemy.class,
-                DestroyAfterEnemy.class, DestroyTarget.class, DarkChasingEnemy.class, 
-                BlackBulletAttractingEnemy.class, GeneratingChasingEnemy.class, 
-                ExplodeEnemy.class, TeleportAimedFiringEnemy.class, 
+                DestroyAfterEnemy.class, DestroyTarget.class, DarkChasingEnemy.class,
+                BlackBulletAttractingEnemy.class, GeneratingChasingEnemy.class,
+                ExplodeEnemy.class, TeleportAimedFiringEnemy.class,
                 BulletRepellingFiringEnemy.class, AimedAccurateFastFiringEnemy.class
         };
         data[99] = new Class[] {

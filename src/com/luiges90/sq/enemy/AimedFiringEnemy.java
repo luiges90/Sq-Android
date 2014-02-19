@@ -17,7 +17,8 @@ public class AimedFiringEnemy extends BaseEnemy {
 
     private static List<Behaviour> getBehaviours() {
         List<Behaviour> b = new ArrayList<Behaviour>();
-        b.add(new AimedFiring(DEFAULT_FIRING_RATE, DEFAULT_BULLET_SPEED, (float) Math.toRadians(10),
+        b.add(new AimedFiring(DEFAULT_FIRING_RATE, DEFAULT_BULLET_SPEED,
+                (float) Math.toRadians(10),
                 SimpleBullet.class));
         return b;
     }

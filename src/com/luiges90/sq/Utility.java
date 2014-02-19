@@ -79,7 +79,7 @@ public class Utility {
         }
         return null;
     }
-    
+
     public static BaseEnemy createEnemyFromClass(Class<? extends BaseEnemy> clazz, BaseEnemy parent) {
         try {
             return clazz.getConstructor(BaseEnemy.class).newInstance(parent);

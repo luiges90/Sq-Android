@@ -26,9 +26,10 @@ public class Boss1 extends BaseEnemy {
         b.add(new Hp(70));
         b.add(new ColorShift(0, 40));
         b.add(new Chasing(0.04f));
-        b.add(new AimedFiring(GameView.FPS * 3 / 2, DEFAULT_BULLET_SPEED, (float) Math.toRadians(10),
+        b.add(new AimedFiring(GameView.FPS * 3 / 2, DEFAULT_BULLET_SPEED, (float) Math
+                .toRadians(10),
                 SimpleBullet.class));
-        b.add(new RandomFiring(GameView.FPS * 3 / 2, DEFAULT_BULLET_SPEED, 
+        b.add(new RandomFiring(GameView.FPS * 3 / 2, DEFAULT_BULLET_SPEED,
                 SimpleBullet.class));
         b.add(new CounterAttack(DEFAULT_BULLET_SPEED, 0, SimpleBullet.class));
         return b;
@@ -37,5 +38,5 @@ public class Boss1 extends BaseEnemy {
     public Boss1(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE * 3, COLOR, getBehaviours());
     }
-    
+
 }

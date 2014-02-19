@@ -28,5 +28,5 @@ public class HpChasingEnemy extends BaseEnemy {
     public HpChasingEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

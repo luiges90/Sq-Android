@@ -24,9 +24,9 @@ public class ChasingEnemy extends BaseEnemy {
     public ChasingEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
     public ChasingEnemy(BaseEnemy owner) {
-        super(owner.getPosition(), DEFAULT_SPEED, DEFAULT_SIZE, -1, COLOR, 
+        super(owner.getPosition(), DEFAULT_SPEED, DEFAULT_SIZE, -1, COLOR,
                 false, owner, getBehaviours());
     }
 

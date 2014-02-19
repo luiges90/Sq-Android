@@ -28,5 +28,5 @@ public class BlackBulletAttractingEnemy extends BaseEnemy {
     public BlackBulletAttractingEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

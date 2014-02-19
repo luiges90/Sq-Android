@@ -22,15 +22,15 @@ public class Chasing implements OnFrameBehaviour {
 
         float current = owner.getVelocity().angle;
         float target = Vector.fromTo(owner.getPosition(), field.getPlayerPosition()).angle;
-        
+
         float diff = Math.abs(target - current);
         float direction;
         if (target > current) {
-            direction = diff > Math.PI ? -1 : 1; 
+            direction = diff > Math.PI ? -1 : 1;
         } else {
             direction = diff > Math.PI ? 1 : -1;
         }
-        
+
         float oldMag = owner.getVelocity().length;
         if (diff < this.chaseFactor) {
             owner.setVelocity(Vector.fromRT(oldMag, target));

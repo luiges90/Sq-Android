@@ -30,7 +30,7 @@ public class Boss2 extends BaseEnemy {
         b.add(new Blinking(30));
         b.add(new TeleportOnHit());
         b.add(new CounterAttack(DEFAULT_BULLET_SPEED, 0, IndestructibleBullet.class));
-        b.add(new RandomFiring(GameView.FPS * 3 / 4, DEFAULT_BULLET_SPEED, 3, 
+        b.add(new RandomFiring(GameView.FPS * 3 / 4, DEFAULT_BULLET_SPEED, 3,
                 (float) Math.toRadians(10), SimpleBullet.class));
         return b;
     }
@@ -38,5 +38,5 @@ public class Boss2 extends BaseEnemy {
     public Boss2(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE * 3, COLOR, getBehaviours());
     }
-    
+
 }

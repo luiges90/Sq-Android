@@ -34,7 +34,7 @@ public class Boss5 extends BaseEnemy {
         b.add(new TeleportOnHit());
         b.add(new AimedFiring(DEFAULT_FIRING_RATE / 2, DEFAULT_BULLET_SPEED * 2, 0,
                 SimpleBullet.class));
-        b.add(new CounterAttack(true, DEFAULT_BULLET_SPEED, 60, (float) Math.toRadians(360 / 60), 
+        b.add(new CounterAttack(true, DEFAULT_BULLET_SPEED, 60, (float) Math.toRadians(360 / 60),
                 0, IndestructibleBullet.class));
         b.add(new Split(3, BlackBulletAttractingEnemy.class));
         return b;
@@ -43,5 +43,5 @@ public class Boss5 extends BaseEnemy {
     public Boss5(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE * 3, COLOR, getBehaviours());
     }
-    
+
 }

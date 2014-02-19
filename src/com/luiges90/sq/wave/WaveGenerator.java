@@ -8,5 +8,5 @@ import com.luiges90.sq.enemy.BaseEnemy;
 public interface WaveGenerator {
 
     public List<BaseEnemy> createWave(GameField field);
-    
+
 }

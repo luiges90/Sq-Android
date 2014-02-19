@@ -26,5 +26,5 @@ public class ChasingFiringEnemy extends BaseEnemy {
     public ChasingFiringEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

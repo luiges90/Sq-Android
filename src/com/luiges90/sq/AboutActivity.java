@@ -18,7 +18,7 @@ import com.google.analytics.tracking.android.GoogleAnalytics;
 import com.google.analytics.tracking.android.MapBuilder;
 
 public class AboutActivity extends Activity {
-    
+
     public static final String TRACK_PREF_KEY = "sq_track";
 
     @Override
@@ -30,28 +30,29 @@ public class AboutActivity extends Activity {
 
         CheckBox telemetry = (CheckBox) this.findViewById(R.id.cbTelemetry);
         telemetry.setChecked(GoogleAnalytics.getInstance(this).getAppOptOut());
-        
-        telemetry.setOnCheckedChangeListener(new OnCheckedChangeListener(){
+
+        telemetry.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     EasyTracker.getInstance(AboutActivity.this).send(
                             MapBuilder.createEvent("track", "track", "opt out", null)
-                                .build());
+                                    .build());
                 } else {
                     EasyTracker.getInstance(AboutActivity.this).send(
                             MapBuilder.createEvent("track", "track", "opt in", null)
-                                .build());
+                                    .build());
                 }
-                
-                SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(AboutActivity.this);
+
+                SharedPreferences settings = PreferenceManager
+                        .getDefaultSharedPreferences(AboutActivity.this);
                 SharedPreferences.Editor editor = settings.edit();
                 editor.putBoolean(AboutActivity.TRACK_PREF_KEY, isChecked);
 
                 editor.commit();
             }
-            
+
         });
     }
 
@@ -64,7 +65,7 @@ public class AboutActivity extends Activity {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
-    
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

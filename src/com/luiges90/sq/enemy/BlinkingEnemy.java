@@ -28,5 +28,5 @@ public class BlinkingEnemy extends BaseEnemy {
     public BlinkingEnemy(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE, COLOR, getBehaviours());
     }
-    
+
 }

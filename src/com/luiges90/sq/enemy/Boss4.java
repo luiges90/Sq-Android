@@ -44,5 +44,5 @@ public class Boss4 extends BaseEnemy {
     public Boss4(Vector position) {
         super(position, DEFAULT_SPEED, DEFAULT_SIZE * 3, COLOR, getBehaviours());
     }
-    
+
 }

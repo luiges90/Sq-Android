@@ -8,7 +8,7 @@ import com.luiges90.sq.Vector;
 import com.luiges90.sq.enemy.BaseEnemy;
 
 public class CounterAttack implements OnDestroyBehaviour {
-    
+
     /**
      * 
      */
@@ -16,11 +16,11 @@ public class CounterAttack implements OnDestroyBehaviour {
     private Class<? extends BaseEnemy> bullet;
     private int speed, spread;
     private float spreadAngle, aimError;
-    
+
     private boolean onlyOnDestroy;
-    
+
     private int soundResId;
-    
+
     public CounterAttack(int speed, float aimError, Class<? extends BaseEnemy> bullet) {
         this(false, speed, 1, 0, aimError, R.raw.fire, bullet);
     }
@@ -29,14 +29,14 @@ public class CounterAttack implements OnDestroyBehaviour {
             Class<? extends BaseEnemy> bullet) {
         this(false, speed, spread, spreadAngle, aimError, R.raw.fire, bullet);
     }
-    
-    public CounterAttack(boolean onlyOnDestroy, 
+
+    public CounterAttack(boolean onlyOnDestroy,
             int speed, int spread, float spreadAngle, float aimError,
             Class<? extends BaseEnemy> bullet) {
         this(onlyOnDestroy, speed, spread, spreadAngle, aimError, R.raw.fire, bullet);
     }
-    
-    public CounterAttack(boolean onlyOnDestroy, 
+
+    public CounterAttack(boolean onlyOnDestroy,
             int speed, int spread, float spreadAngle, float aimError, int soundResId,
             Class<? extends BaseEnemy> bullet) {
         this.onlyOnDestroy = onlyOnDestroy;
@@ -51,7 +51,7 @@ public class CounterAttack implements OnDestroyBehaviour {
     public boolean isDestroyed(MovingEntity owner, GameField field) {
         return true;
     }
-    
+
     private void fire(MovingEntity owner, GameField field) {
         float angle;
         if (field.isPlayerDestroyed()) {
@@ -85,4 +85,3 @@ public class CounterAttack implements OnDestroyBehaviour {
     }
 
 }
-    
